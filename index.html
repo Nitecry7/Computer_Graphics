@@ -1,0 +1,209 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <title>Faheem – Individual project from the BE0M39PGR course</title>
+
+    <!-- If you have the CSS file locally, keep it like this: -->
+    <link rel="stylesheet" type="text/css" href="template_BE0M39PGR.css" />
+
+    <!-- Small override to ensure thumbnails are NEVER cropped -->
+    <style type="text/css">
+      .screenshots a {
+        display: inline-block;
+      }
+      img.screenshot {
+        width: 300px;
+        height: 250px;
+        object-fit: contain; /* shows whole image without cropping */
+        background: #ffffff; /* letterbox background */
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="page">
+      <div class="header" id="header">
+        <h1 class="hidden">Individual project from the BE0M39PGR course</h1>
+        <hr class="hidden" />
+      </div>
+
+      <div class="left">
+        <div class="right">
+          <div class="main">
+            <h2 class="project">PGR: F1 Racing Project</h2>
+            <h3 class="author">Muhammadh Faheem Faizal</h3>
+
+            <!-- Thumbnails (300x250) clickable to full-resolution screenshots -->
+            <div class="screenshots">
+              <a href="img/screenshot1.png" target="_blank" rel="noopener">
+                <img
+                  class="screenshot"
+                  src="img/thumb1.png"
+                  alt="Screenshot #1"
+                />
+              </a>
+              <a href="img/screenshot2.png" target="_blank" rel="noopener">
+                <img
+                  class="screenshot"
+                  src="img/thumb2.png"
+                  alt="Screenshot #2"
+                />
+              </a>
+              <a href="img/screenshot3.png" target="_blank" rel="noopener">
+                <img
+                  class="screenshot"
+                  src="img/thumb3.png"
+                  alt="Screenshot #3"
+                />
+              </a>
+            </div>
+
+            <h4>Project description</h4>
+         
+            <p>
+              This project is an interactive OpenGL racing scene inspired by an F1 track environment. The             scene features a
+              procedurally generated oval track with kerbs, grass borders, and a clearly marked start / finish area. A drivable
+              player car is rendered using an external 3D model (OBJ loaded via Assimp) and shaded using            Phong lighting for a
+              more realistic appearance. The track also includes texture-based decals and sponsor branding            using a texture atlas,
+              alongside additional props such as animated banners to enhance depth and scale.
+            </p>
+
+            <p>
+              Multiple camera modes are implemented to support different gameplay and viewing perspectives,             including an bird's eye view
+              , orbit view, free camera, and a car-follow camera. Camera transitions are designed to feel             smooth between modes, and
+              mouse-look is supported for both free and follow camera control. A HUD is displayed to            provide driving feedback
+              such as speed and boost status, rendered unlit so it remains readable regardless of scene             lighting and fog.
+            </p>
+
+            <p>
+              Beyond the player vehicle, two NPC cars are rendered and continuously drive around the track            along a never-ending
+              Catmull-Rom spline path. Their motion can be paused and resumed using the <b>N</b> key,             allowing the scene to shift
+              between an active racing environment and a static showcase for viewing.
+            </p>
+
+            <p>
+              User interaction is central to the project. The player can drive and steer using standard             controls, and a boost
+              mechanic is available via <b>left click</b>, granting a short <b>3-second</b> burst of speed            followed by a
+              <b>5-second</b> cooldown while the boost bar replenishes. The scene also includes an            interactive cone obstacle on
+              the track: in the <b> bird's eye view (1)</b>, <b>free camera view (3)</b>, and <b>car camera view             (4)</b>, the user can
+              pick up, drag, and drop the cone using <b>left click</b>. In the same camera modes, the NPC             cars can also be frozen
+              and unfrozen with <b>left click</b>, adding an extra layer of interactivity beyond driving.
+            </p>
+
+            <p>
+              The environment supports lighting and atmosphere controls for variety and presentation. The             city/track scene
+              includes realistic lighting, simple fog effects, and a “dark mode” style setup where            headlights can be toggled on
+              and off for a more dramatic, spooky look. As a quality-of-life feature, the player can also             toggle the car’s colour
+              styling (blue vs. blue/red livery) using the <b>V</b> key.
+            </p>
+
+
+
+            <h4>Control keys</h4>
+            <p>
+              <strong>Driving</strong>
+            </p>
+            <ul>
+              <li><strong>W</strong> : Accelerate / move forward</li>
+              <li><strong>S</strong> : Brake / reverse</li>
+              <li><strong>A</strong> : Steer left</li>
+              <li><strong>D</strong> : Steer right</li>
+              
+              
+            </ul>
+
+            <p>
+              <strong>Camera Modes</strong>
+            </p>
+            <ul>
+              <li>
+                <strong>1</strong> : Camera Mode 1 - Bird's Eye View 
+              </li>
+              <li>
+                <strong>2</strong> : Camera Mode 2 - Orbit View
+              </li>
+              <li>
+                <strong>3</strong> : Camera mode 3 - Free Camera View With
+                Mouse-Look
+              </li>
+              <li>
+                <strong>4</strong> : Camera mode 4 - Car Chase View
+              </li>
+            </ul>
+              <p>
+                <strong>Camera Controls</strong>
+              </p>
+              <ul>
+                <li>
+                <strong>Mouse Movement</strong> : Rotate View 
+                </li>
+                <li>
+                <strong>↑ ↓ ← → Keys</strong> : Move Camera Around In Free Camera 
+                </li>
+                <li>
+                <strong>Q</strong> : Ascend Camera In Free Camera 
+                </li>
+                <li>
+                <strong>E</strong> : Descend Camera In Free Camera
+                </li>
+                <li>
+                <strong>B</strong> : Toggle Cursor 
+                </li>
+                 <li>
+                <strong>+</strong> / <strong>-</strong> : Zoom In/Out 
+              </li>
+              </ul>
+            
+
+            <p>
+              <strong>Other Controls</strong>
+            </p>
+            <ul>
+             
+              <li>
+                <strong>Right Click</strong> : Interact with Cone/NPC Cars (in Camera Modes 1, 3, 4)
+              </li>
+              <li>
+                <strong>Left Click</strong> : Boost Car Speed
+              </li>
+              <li>
+                <strong>F</strong> : Adjust Fog Level
+              </li>
+              <li>
+                <strong>H</strong> : Toggle Headlights On/Off
+              </li>
+              <li>
+                <strong>N</strong> : Pause/Resume NPC Cars
+              </li>
+               <li>
+                <strong>V</strong> : Toggle Player Car Colour Style
+              </li>
+              <li>
+                <strong>M</strong>: Toggle Light/Dark Modes
+              </li>
+              <li>
+                <strong>P</strong> : Toggle shading model (Phong per-fragment ↔ Phong per-vertex)
+              </li>
+              <li>
+                <strong>C</strong> : Reset Car positions to the track start 
+              </li>
+            </ul>
+
+            <h4>Download</h4>
+            <ul>
+              <li><a href="code/src.zip">Source code</a></li>
+              <li><a href="code/windows.zip">Executable version</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <hr class="hidden" />
+        <div class="footer_inner">Last modified: 17.01.2026</div>
+      </div>
+    </div>
+  </body>
+</html>
